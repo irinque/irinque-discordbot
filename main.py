@@ -4,7 +4,7 @@ from events.on_member_join import member_join
 from events.on_voice_state_update import voice_state_update
 from commands.information import send_information
 from commands.custom_embed import send_custom_embed
-from settings import channel_rules_id, channel_greetings_id, role_user_id
+from settings import CHANNEL_RULES_ID, CHANNEL_GREETINGS_ID, ROLE_USER_ID
 from config import TOKEN
 
 intents = Intents().all()
@@ -17,7 +17,7 @@ async def on_ready():
 
 @bot.event
 async def on_member_join(member: Member):
-    await member_join(member=member, role_user_id=role_user_id, channel_id=channel_greetings_id)
+    await member_join(member=member, role_user_id=ROLE_USER_ID, channel_id=CHANNEL_GREETINGS_ID)
 
 @bot.event
 async def on_voice_state_update(member: Member, before, after):
@@ -25,11 +25,11 @@ async def on_voice_state_update(member: Member, before, after):
 
 @bot.tree.command(name="information")
 async def information(interaction: Interaction):
-    await send_information(interaction=interaction, channel_id=channel_rules_id)
+    await send_information(interaction=interaction, channel_id=CHANNEL_RULES_ID)
 
 @bot.tree.command(name="custom_embed")
 async def custom_embed(interaction: Interaction):
-    await send_custom_embed(interaction=interaction, role_id=role_user_id)
+    await send_custom_embed(interaction=interaction, role_id=ROLE_USER_ID)
 
 if __name__ == "__main__":
     bot.run(token=TOKEN)

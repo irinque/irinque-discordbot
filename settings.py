@@ -1,15 +1,15 @@
-color_embed = "#776894"
+COLOR_EMBED = "#776894"
 
-role_user_id = 1251308137680605195
+ROLE_USER_ID = 1251308137680605195
 
-channel_createvoice_id = 1251305235675086879
-channel_voice_id = 1252029014118498334
-channel_rules_id = 1251242870367584309
-channel_greetings_id = 1251303923742937148
+CHANNEL_CREATEVOICE_ID = 1251305235675086879
+CHANNEL_VOICE_ID = 1252029014118498334
+CHANNEL_RULES_ID = 1251242870367584309
+CHANNEL_GREETINGS_ID = 1251303923742937148
 
-category_voice_id = 1251293179496501410
+CATEGORY_VOICE_ID = 1251293179496501410
 
-voices_whitelist = [channel_voice_id, channel_createvoice_id]
+VOICES_WHITELIST = [CHANNEL_VOICE_ID, CHANNEL_CREATEVOICE_ID]
 
 title_member_join = "👋 HELLO 👋"
 title_rules_ru = "ㅤㅤㅤㅤㅤㅤ 📙 ПРАВИЛА СЕРВЕРА 📙 ㅤㅤㅤㅤㅤㅤ"

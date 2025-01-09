@@ -1,7 +1,7 @@
 from discord.ui import TextInput, Modal, ChannelSelect, View
 from discord.utils import get
 from discord import Embed, TextStyle, Interaction, Colour, ChannelType, Interaction
-from settings import color_embed
+from settings import COLOR_EMBED
 
 async def send_custom_embed(interaction: Interaction, role_id):
     async def select_callback(interaction: Interaction):
@@ -13,7 +13,7 @@ async def send_custom_embed(interaction: Interaction, role_id):
             mention = TextInput(label="📣 УПОМИНАНИЕ(Да/Нет)", style=TextStyle.short, required=True)
             image = TextInput(label="🌄 КАРТИНКА", style=TextStyle.short, required=False)
             async def on_submit(self, interaction: Interaction):
-                embed = Embed(title=self.message_title, description=self.description, colour=Colour.from_str(color_embed))
+                embed = Embed(title=self.message_title, description=self.description, colour=Colour.from_str(COLOR_EMBED))
                 if self.image:
                     embed.set_image(url=self.image)
                 role_user = get(interaction.guild.roles, id=role_id)
